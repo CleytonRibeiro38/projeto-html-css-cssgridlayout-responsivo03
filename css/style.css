@@ -1,0 +1,42 @@
+/*==========RESET==========*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-size: 1em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #e6e6e6;
+}
+/*==========ESTRUTURA DO GRID==========*/
+.estrutura{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "content content aside"
+    "footer footer footer"
+    ;
+}
+.header{
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+}
+.aside{
+    grid-area: aside;
+}
+.footer{
+    grid-area: footer;
+}
+/*==========HEADER==========*/
+.header {width: 100%; background-color: #f7b600; text-align: center; padding: 30px;}
+.header h1 {font-size: 2.5em; color: #4e4e4e; font-weight: bold;}
+.header h1 span {color: white; font-weight: bold;}
+.menu {display: flex; justify-content: center; margin-top: 20px;}
+.menu li a {padding: 8px 12px; color: white; font-weight: bold;}
+.menu li a:hover {background-color: white; color: #f7b600;}
+
