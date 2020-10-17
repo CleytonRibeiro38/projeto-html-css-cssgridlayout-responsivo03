@@ -14,10 +14,11 @@ body{
 /*==========ESTRUTURA DO GRID==========*/
 .estrutura{
     display: grid;
+    grid-template-columns: 1fr 710px 275px 1fr;
     grid-template-areas: 
-    "header header header"
-    "content content aside"
-    "footer footer footer"
+    "header header header header"
+    "...... content aside ...... "
+    "footer footer footer footer"
     ;
 }
 .header{
@@ -34,9 +35,31 @@ body{
 }
 /*==========HEADER==========*/
 .header {width: 100%; background-color: #f7b600; text-align: center; padding: 30px;}
-.header h1 {font-size: 2.5em; color: #4e4e4e; font-weight: bold;}
+.header h1 {font-size: 2.75em; color: #4e4e4e; font-weight: bold;}
 .header h1 span {color: white; font-weight: bold;}
 .menu {display: flex; justify-content: center; margin-top: 20px;}
-.menu li a {padding: 8px 12px; color: white; font-weight: bold;}
+.menu li a {padding: 8px 16px; color: white; font-weight: 500; font-size: 1.1em;}
 .menu li a:hover {background-color: white; color: #f7b600;}
+/*==========CONTENT==========*/
+.content h2 {color: #f7b600; font-size: 1.7em; font-weight: 600;}
+.content span {display: block; margin-bottom: 20px; font-size: 0.8em;}
+.content img {width: 670px;}
+.content p {font-size: 1.1em; font-weight: 500; text-align: justify;}
+.content a {color: #f7b600;}
+.content a:hover {text-decoration: underline;}
+.postagem01 {margin-top: 20px;}
+.postagem01, .postagem02 {background-color: white; padding: 20px; margin-bottom: 20px;}
+/*==========ASIDE==========*/
+.aside h3 {background-color: #ccc; color: #565656; padding: 5px; font-size: 1.17em;}
+.aside p {font-size: 0.8em; padding-top: 5px;}
+.aside a {color: #f7b600;}
+.aside a:hover {text-decoration: underline;}
+.aside01 {margin-top: 20px;}
+hr {border: 1px dotted #ccc; margin-top: 5px;}
+.aside02 a {font-size: 1.2em; font-weight: 500;}
+.aside01, .aside02 {background-color: white; padding: 10px; margin-bottom: 20px; margin-left: 20px;}
+/*==========FOOTER==========*/
+.footer {text-align: center; background-color: #ccc; padding: 20px; margin-bottom: 20px;}
+.footer p {font-size: 1.2em; font-weight: 500;}
+
 
