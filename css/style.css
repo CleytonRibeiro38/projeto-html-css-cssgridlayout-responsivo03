@@ -40,6 +40,32 @@ body{
 .menu {display: flex; justify-content: center; margin-top: 20px;}
 .menu li a {padding: 8px 16px; color: white; font-weight: 500; font-size: 1.1em;}
 .menu li a:hover {background-color: white; color: #f7b600;}
+@media screen and (max-width: 700px){
+    .estrutura {display: block;}
+    .header {padding: 10px;}
+    .menu {display: block;}
+    .menu li a {padding: 0;}
+    .menu li + li {margin-top: 10px;}
+}
+@media screen and (min-width: 501px) and (max-width: 700px){
+    .menu {display: flex;}
+    .menu li +li {margin-left: 10px; margin-top: 0;}
+}
+@media screen and (min-width: 701px) and (max-width: 1000px){
+    .estrutura{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "content aside"
+        "footer footer"
+        ;
+    }
+    .header {grid-area: header;}
+    .content {grid-area: content;}
+    .aside {grid-area: aside;}
+    .footer {grid-area: footer;}   
+}
 /*==========CONTENT==========*/
 .content h2 {color: #f7b600; font-size: 1.7em; font-weight: 600;}
 .content span {display: block; margin-bottom: 20px; font-size: 0.8em;}
@@ -49,6 +75,14 @@ body{
 .content a:hover {text-decoration: underline;}
 .postagem01 {margin-top: 20px;}
 .postagem01, .postagem02 {background-color: white; padding: 20px; margin-bottom: 20px;}
+@media screen and (max-width: 700px){
+    .content img {width: 100%;}
+}
+@media screen and (min-width: 701px) and (max-width:1000px){
+    .content {width: 100%;}
+    .content img {width: 100%;}
+    .postagem01, .postagem02 {margin-right: 5px;}
+}
 /*==========ASIDE==========*/
 .aside h3 {background-color: #ccc; color: #565656; padding: 5px; font-size: 1.17em;}
 .aside p {font-size: 0.8em; padding-top: 5px;}
@@ -58,6 +92,12 @@ body{
 hr {border: 1px dotted #ccc; margin-top: 5px;}
 .aside02 a {font-size: 1.2em; font-weight: 500;}
 .aside01, .aside02 {background-color: white; padding: 10px; margin-bottom: 20px; margin-left: 20px;}
+@media screen and (max-width: 700px){
+    .aside01, .aside02 {margin-left: 0;}
+}
+@media screen and (min-width: 701px) and (max-width:1000px){
+    .aside01, .aside02 {width: 100%; margin-left: 0;}
+}
 /*==========FOOTER==========*/
 .footer {text-align: center; background-color: #ccc; padding: 20px; margin-bottom: 20px;}
 .footer p {font-size: 1.2em; font-weight: 500;}
